@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    DataContext="{StaticResource Localized}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel
@@ -16,22 +17,22 @@
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="20"
-            Text="{Binding Source={StaticResource Localized}, Path=[A]}" />
+            Text="{Binding [A]}" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="20"
-            Text="{Binding Source={StaticResource Localized}, Path=[B]}" />
+            Text="{Binding [B]}" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="20"
-            Text="{Binding Source={StaticResource Localized}, Path=[C]}" />
+            Text="{Binding [C]}" />
 
         <Button
             x:Name="btnChangeLanguage"
             Margin="10"
             Padding="10"
             Click="btnChangeLanguage_Click"
-            Content="{Binding Source={StaticResource Localized}, Path=[Change]}" />
+            Content="{Binding [Change]}" />
 
     </StackPanel>
     

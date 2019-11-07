@@ -6,8 +6,6 @@ namespace ChangeLanguageStudyUWP
 {
     public class LocalizationHelper
     {
-        public event EventHandler OnLocalizationChange;
-
         public static bool IsCultureItalian(string cultureCode)
             => string.Equals(cultureCode, "it", StringComparison.InvariantCultureIgnoreCase)
             || string.Equals(cultureCode, "it-IT", StringComparison.InvariantCultureIgnoreCase);
@@ -25,7 +23,6 @@ namespace ChangeLanguageStudyUWP
         public void ChangeLocalizationTo(string cultureCode)
         {
             Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = cultureCode;
-            OnLocalizationChange?.Invoke(null, new PropertyChangedEventArgs(string.Empty));
         }
     }
 }
